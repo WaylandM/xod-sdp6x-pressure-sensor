@@ -1,0 +1,6 @@
+{
+  "description": "Library for Sensirion SDP6x differential pressure sensors, including the SDP610. Wraps a modified version of https://github.com/EngineerTony/Sensirion_SDP6x_pressure_sens.",
+  "license": "GNU General Public License v3.0",
+  "name": "sdp6x-pressure-sensor",
+  "version": "0.0.1"
+}
