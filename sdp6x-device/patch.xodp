@@ -1,4 +1,5 @@
 {
+  "description": "Create an SDP6x device.",
   "nodes": [
     {
       "id": "rJ4ZjBlco",
@@ -8,6 +9,42 @@
         "y": 1
       },
       "type": "xod/patch-nodes/not-implemented-in-xod"
+    },
+    {
+      "boundLiterals": {
+        "__out__": "60.0"
+      },
+      "description": "SCALE FACTOR. N.B. you need to set the scale factor to the appropriate value for your sensor: SDP6xx-500Pa and SDP5xx=60.0; SDP6x0-125Pa=240.0; SDP6x0-25Pa=1200.0.\n",
+      "id": "Bk42E_l9o",
+      "label": "SF",
+      "position": {
+        "units": "slots",
+        "x": 1,
+        "y": 0
+      },
+      "type": "xod/patch-nodes/input-number"
+    },
+    {
+      "description": "I²C bus",
+      "id": "Hy_xLOg5i",
+      "label": "I2C",
+      "position": {
+        "units": "slots",
+        "x": 0,
+        "y": 0
+      },
+      "type": "xod/i2c/input-i2c"
+    },
+    {
+      "description": "An SDP6x device.",
+      "id": "r1AMIOl9s",
+      "label": "DEV",
+      "position": {
+        "units": "slots",
+        "x": 0,
+        "y": 2
+      },
+      "type": "xod/patch-nodes/output-self"
     }
   ]
 }

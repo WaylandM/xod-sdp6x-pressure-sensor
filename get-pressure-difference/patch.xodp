@@ -1,0 +1,58 @@
+{
+  "description": "Read pressure difference.",
+  "nodes": [
+    {
+      "description": "An SDP6x device.",
+      "id": "S1TJU9eqj",
+      "label": "DEV",
+      "position": {
+        "units": "slots",
+        "x": 2,
+        "y": 1
+      },
+      "type": "@/input-sdp6x-device"
+    },
+    {
+      "id": "B10e89e9s",
+      "position": {
+        "units": "slots",
+        "x": 2,
+        "y": 2
+      },
+      "type": "xod/patch-nodes/not-implemented-in-xod"
+    },
+    {
+      "description": "Update.",
+      "id": "SJmfLceqs",
+      "label": "UPD",
+      "position": {
+        "units": "slots",
+        "x": 3,
+        "y": 1
+      },
+      "type": "xod/patch-nodes/input-pulse"
+    },
+    {
+      "description": "Pulse on read.",
+      "id": "HkhMI9g5i",
+      "label": "DONE",
+      "position": {
+        "units": "slots",
+        "x": 3,
+        "y": 3
+      },
+      "type": "xod/patch-nodes/output-pulse"
+    },
+    {
+      "description": "Differential pressure in pascal.",
+      "id": "rkJpU5l9o",
+      "label": "Pa",
+      "position": {
+        "units": "slots",
+        "x": 2,
+        "y": 3
+      },
+      "type": "xod/patch-nodes/output-number"
+    }
+  ]
+}

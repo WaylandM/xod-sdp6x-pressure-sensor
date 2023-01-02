@@ -1,0 +1,61 @@
+{
+  "description": "Set resolution of SDP6x sensor. For further information on the resolution of SDP600 series sensors, please see: https://sensirion.com/media/documents/1BA19F23/6166C545/Sensirion_Differential_Pressure_AppNotes_SDP600Series_Changing_Measu.pdf",
+  "nodes": [
+    {
+      "id": "S1lsece5s",
+      "position": {
+        "units": "slots",
+        "x": 0,
+        "y": 1
+      },
+      "type": "xod/patch-nodes/not-implemented-in-xod"
+    },
+    {
+      "boundLiterals": {
+        "__out__": "12"
+      },
+      "description": "Resolution (bits). Options: 9, 10, 11, 12, 13, 14, 15 and 16.  For most applications, Sensirion recommends 12 bit resolution (default setting) in order to combine excellent accuracy with fast response time. After each hard reset or soft reset of the sensor, the default resolution is restored.",
+      "id": "Sksox9g5s",
+      "label": "RES",
+      "position": {
+        "units": "slots",
+        "x": 1,
+        "y": 0
+      },
+      "type": "xod/patch-nodes/input-number"
+    },
+    {
+      "description": "An SDP6x device.",
+      "id": "r1YjZce5s",
+      "label": "DEV",
+      "position": {
+        "units": "slots",
+        "x": 0,
+        "y": 0
+      },
+      "type": "@/input-sdp6x-device"
+    },
+    {
+      "description": "Update.",
+      "id": "r1LTZqe5j",
+      "label": "UPD",
+      "position": {
+        "units": "slots",
+        "x": 2,
+        "y": 0
+      },
+      "type": "xod/patch-nodes/input-pulse"
+    },
+    {
+      "description": "Pulse on completion.",
+      "id": "S1cA-cl5s",
+      "label": "DONE",
+      "position": {
+        "units": "slots",
+        "x": 0,
+        "y": 2
+      },
+      "type": "xod/patch-nodes/output-pulse"
+    }
+  ]
+}

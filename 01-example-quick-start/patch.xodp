@@ -1,0 +1,109 @@
+{
+  "description": "Patch to demonstrate basic usage of differential pressure sensor. Run in debugger.",
+  "links": [
+    {
+      "id": "S1tDJnl5o",
+      "input": {
+        "nodeId": "ry8P13ecs",
+        "pinKey": "HkXK-dGob"
+      },
+      "output": {
+        "nodeId": "HJT7J2e5s",
+        "pinKey": "H1rR0ol9s"
+      }
+    },
+    {
+      "id": "HJ5uy3xcj",
+      "input": {
+        "nodeId": "ByS_12x5i",
+        "pinKey": "HJAq-A_8-"
+      },
+      "output": {
+        "nodeId": "HJT7J2e5s",
+        "pinKey": "BkHJJneqi"
+      }
+    },
+    {
+      "id": "Sk5Fy2g9s",
+      "input": {
+        "nodeId": "BJLKy2e9j",
+        "pinKey": "HkXK-dGob"
+      },
+      "output": {
+        "nodeId": "ByS_12x5i",
+        "pinKey": "r1yhZRd8W"
+      }
+    },
+    {
+      "id": "HJQDl0gqo",
+      "input": {
+        "nodeId": "HJT7J2e5s",
+        "pinKey": "BJQNgAe9i"
+      },
+      "output": {
+        "nodeId": "ryc8y2g5o",
+        "pinKey": "HJU8CE2lW"
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "HJT7J2e5s",
+      "position": {
+        "units": "slots",
+        "x": 6,
+        "y": 1
+      },
+      "type": "@/differential-pressure-sensor"
+    },
+    {
+      "boundLiterals": {
+        "B13SCNhl-": "0.1"
+      },
+      "id": "ryc8y2g5o",
+      "position": {
+        "units": "slots",
+        "x": 8,
+        "y": 0
+      },
+      "type": "xod/core/clock"
+    },
+    {
+      "id": "ry8P13ecs",
+      "position": {
+        "units": "slots",
+        "x": 5,
+        "y": 3
+      },
+      "size": {
+        "height": 1,
+        "units": "slots",
+        "width": 2
+      },
+      "type": "xod/debug/watch"
+    },
+    {
+      "id": "ByS_12x5i",
+      "position": {
+        "units": "slots",
+        "x": 8,
+        "y": 2
+      },
+      "type": "xod/core/count"
+    },
+    {
+      "id": "BJLKy2e9j",
+      "position": {
+        "units": "slots",
+        "x": 8,
+        "y": 3
+      },
+      "size": {
+        "height": 1,
+        "units": "slots",
+        "width": 2
+      },
+      "type": "xod/debug/watch"
+    }
+  ]
+}

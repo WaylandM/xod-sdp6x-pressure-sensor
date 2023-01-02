@@ -1,18 +1,24 @@
+#pragma XOD require "https://github.com/WaylandM/Sensirion_SDP6x_pressure_sens"
+
+#include <Wire.h>
+#include <SDP6x.h>
 
 node {
-    // Internal state variables defined at this level persists across evaluations
-    Number foo;
-    uint8_t bar = 5;
+    meta {
+        using Type = SDP6xClass*;
+    }
 
+    uint8_t mem[sizeof(SDP6xClass)];
+    
     void evaluate(Context ctx) {
-        bar += 42;
+        if (!isSettingUp()) return;
 
-        if (isSettingUp()) {
-            // This run once
-            foo = (Number)(bar + 1);
-        }
+        auto wire = getValue<input_I2C>(ctx);
+        auto sf = getValue<input_SF>(ctx);
 
-        auto inValue = getValue<input_IN>(ctx);
-        emitValue<output_OUT>(ctx, inValue);
+        Type sensor = new (mem) SDP6xClass(*wire, sf);
+
+        emitValue<output_DEV>(ctx, sensor);
+
     }
 }

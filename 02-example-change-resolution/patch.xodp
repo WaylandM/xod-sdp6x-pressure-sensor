@@ -1,0 +1,265 @@
+{
+  "description": "Patch to demonstrate how to set the resolution of the sensor. For more information on the resolution of SDP600 series sensors, please see: https://sensirion.com/media/documents/1BA19F23/6166C545/Sensirion_Differential_Pressure_AppNotes_SDP600Series_Changing_Measu.pdf",
+  "links": [
+    {
+      "id": "B1iQbRecj",
+      "input": {
+        "nodeId": "BJbmZ0g9j",
+        "pinKey": "__in__"
+      },
+      "output": {
+        "nodeId": "rJn-Z0l9j",
+        "pinKey": "r1AMIOl9s"
+      }
+    },
+    {
+      "id": "B1oVWCg5o",
+      "input": {
+        "nodeId": "SJaf-Re5j",
+        "pinKey": "r1YjZce5s"
+      },
+      "output": {
+        "nodeId": "rJn-Z0l9j",
+        "pinKey": "r1AMIOl9s"
+      }
+    },
+    {
+      "id": "BJbLW0e5s",
+      "input": {
+        "nodeId": "SJaf-Re5j",
+        "pinKey": "Sksox9g5s"
+      },
+      "output": {
+        "nodeId": "S1QHb0gqo",
+        "pinKey": "ByfGSDjQE"
+      }
+    },
+    {
+      "id": "Sya8bCl9s",
+      "input": {
+        "nodeId": "SJaf-Re5j",
+        "pinKey": "r1LTZqe5j"
+      },
+      "output": {
+        "nodeId": "rJD8-Rg9j",
+        "pinKey": "Bkf4BDsmV"
+      }
+    },
+    {
+      "id": "rJuDWAeci",
+      "input": {
+        "nodeId": "S18E-Cl9j",
+        "pinKey": "SJmfLceqs"
+      },
+      "output": {
+        "nodeId": "SyzwZ0xqi",
+        "pinKey": "Bkf4BDsmV"
+      }
+    },
+    {
+      "id": "BycF-Ag5j",
+      "input": {
+        "nodeId": "S18E-Cl9j",
+        "pinKey": "S1TJU9eqj"
+      },
+      "output": {
+        "nodeId": "B11F-Ax9j",
+        "pinKey": "__out__"
+      }
+    },
+    {
+      "id": "rJQqbCg9j",
+      "input": {
+        "nodeId": "rJ0YWRl9s",
+        "pinKey": "HJAq-A_8-"
+      },
+      "output": {
+        "nodeId": "SJaf-Re5j",
+        "pinKey": "S1cA-cl5s"
+      }
+    },
+    {
+      "id": "Hy2cWAx5o",
+      "input": {
+        "nodeId": "BkI5WCl5o",
+        "pinKey": "HJAq-A_8-"
+      },
+      "output": {
+        "nodeId": "S18E-Cl9j",
+        "pinKey": "HkhMI9g5i"
+      }
+    },
+    {
+      "id": "S1UsbRx5s",
+      "input": {
+        "nodeId": "Sy-jWRgco",
+        "pinKey": "HkXK-dGob"
+      },
+      "output": {
+        "nodeId": "rJ0YWRl9s",
+        "pinKey": "r1yhZRd8W"
+      }
+    },
+    {
+      "id": "S1y3WAxqj",
+      "input": {
+        "nodeId": "rkcob0x5i",
+        "pinKey": "HkXK-dGob"
+      },
+      "output": {
+        "nodeId": "S18E-Cl9j",
+        "pinKey": "rkJpU5l9o"
+      }
+    },
+    {
+      "id": "SJ6nZ0g9j",
+      "input": {
+        "nodeId": "BJ5hbAgqj",
+        "pinKey": "HkXK-dGob"
+      },
+      "output": {
+        "nodeId": "BkI5WCl5o",
+        "pinKey": "r1yhZRd8W"
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "rJn-Z0l9j",
+      "position": {
+        "units": "slots",
+        "x": 1,
+        "y": 0
+      },
+      "type": "@/sdp6x-device"
+    },
+    {
+      "id": "SJaf-Re5j",
+      "position": {
+        "units": "slots",
+        "x": 3,
+        "y": 1
+      },
+      "type": "@/set-resolution"
+    },
+    {
+      "id": "BJbmZ0g9j",
+      "label": "DEV",
+      "position": {
+        "units": "slots",
+        "x": 1,
+        "y": 1
+      },
+      "type": "xod/patch-nodes/to-bus"
+    },
+    {
+      "id": "S18E-Cl9j",
+      "position": {
+        "units": "slots",
+        "x": 7,
+        "y": 1
+      },
+      "type": "@/get-pressure-difference"
+    },
+    {
+      "boundLiterals": {
+        "ByfGSDjQE": "16"
+      },
+      "id": "S1QHb0gqo",
+      "position": {
+        "units": "slots",
+        "x": 4,
+        "y": 0
+      },
+      "type": "xod/debug/tweak-number"
+    },
+    {
+      "id": "rJD8-Rg9j",
+      "position": {
+        "units": "slots",
+        "x": 5,
+        "y": 0
+      },
+      "type": "xod/debug/tweak-pulse"
+    },
+    {
+      "id": "SyzwZ0xqi",
+      "position": {
+        "units": "slots",
+        "x": 8,
+        "y": 0
+      },
+      "type": "xod/debug/tweak-pulse"
+    },
+    {
+      "id": "B11F-Ax9j",
+      "label": "DEV",
+      "position": {
+        "units": "slots",
+        "x": 7,
+        "y": 0
+      },
+      "type": "xod/patch-nodes/from-bus"
+    },
+    {
+      "id": "rJ0YWRl9s",
+      "position": {
+        "units": "slots",
+        "x": 2,
+        "y": 2
+      },
+      "type": "xod/core/count"
+    },
+    {
+      "id": "BkI5WCl5o",
+      "position": {
+        "units": "slots",
+        "x": 9,
+        "y": 2
+      },
+      "type": "xod/core/count"
+    },
+    {
+      "id": "Sy-jWRgco",
+      "position": {
+        "units": "slots",
+        "x": 2,
+        "y": 3
+      },
+      "size": {
+        "height": 1,
+        "units": "slots",
+        "width": 2
+      },
+      "type": "xod/debug/watch"
+    },
+    {
+      "id": "rkcob0x5i",
+      "position": {
+        "units": "slots",
+        "x": 6,
+        "y": 3
+      },
+      "size": {
+        "height": 1,
+        "units": "slots",
+        "width": 2
+      },
+      "type": "xod/debug/watch"
+    },
+    {
+      "id": "BJ5hbAgqj",
+      "position": {
+        "units": "slots",
+        "x": 9,
+        "y": 3
+      },
+      "size": {
+        "height": 1,
+        "units": "slots",
+        "width": 2
+      },
+      "type": "xod/debug/watch"
+    }
+  ]
+}

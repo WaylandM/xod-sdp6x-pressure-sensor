@@ -1,0 +1,149 @@
+{
+  "description": "Combines low level nodes to create a simple differential pressure sensor.",
+  "links": [
+    {
+      "id": "HkGwasgcj",
+      "input": {
+        "nodeId": "r1Cw3ieqs",
+        "pinKey": "Bk42E_l9o"
+      },
+      "output": {
+        "nodeId": "rkTI6slqj",
+        "pinKey": "__out__"
+      }
+    },
+    {
+      "id": "S1pRAjg5o",
+      "input": {
+        "nodeId": "H1rR0ol9s",
+        "pinKey": "__in__"
+      },
+      "output": {
+        "nodeId": "HJIR3sl9i",
+        "pinKey": "rkJpU5l9o"
+      }
+    },
+    {
+      "id": "SyFy13g9s",
+      "input": {
+        "nodeId": "BkHJJneqi",
+        "pinKey": "__in__"
+      },
+      "output": {
+        "nodeId": "HJIR3sl9i",
+        "pinKey": "HkhMI9g5i"
+      }
+    },
+    {
+      "id": "rJDrJheco",
+      "input": {
+        "nodeId": "r1Cw3ieqs",
+        "pinKey": "Hy_xLOg5i"
+      },
+      "output": {
+        "nodeId": "B1Er12e9i",
+        "pinKey": "__out__"
+      }
+    },
+    {
+      "id": "H1KGl0x9s",
+      "input": {
+        "nodeId": "HJIR3sl9i",
+        "pinKey": "S1TJU9eqj"
+      },
+      "output": {
+        "nodeId": "r1Cw3ieqs",
+        "pinKey": "r1AMIOl9s"
+      }
+    },
+    {
+      "id": "By5ElRe5s",
+      "input": {
+        "nodeId": "HJIR3sl9i",
+        "pinKey": "SJmfLceqs"
+      },
+      "output": {
+        "nodeId": "BJQNgAe9i",
+        "pinKey": "__out__"
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "r1Cw3ieqs",
+      "position": {
+        "units": "slots",
+        "x": 2,
+        "y": 1
+      },
+      "type": "@/sdp6x-device"
+    },
+    {
+      "id": "HJIR3sl9i",
+      "position": {
+        "units": "slots",
+        "x": 2,
+        "y": 2
+      },
+      "type": "@/get-pressure-difference"
+    },
+    {
+      "boundLiterals": {
+        "__out__": "60.0"
+      },
+      "description": "SCALE FACTOR. N.B. you need to set the scale factor to the appropriate value for your sensor: SDP6xx-500Pa and SDP5xx=60.0; SDP6x0-125Pa=240.0; SDP6x0-25Pa=1200.0.\n",
+      "id": "rkTI6slqj",
+      "label": "SF",
+      "position": {
+        "units": "slots",
+        "x": 3,
+        "y": 0
+      },
+      "type": "xod/patch-nodes/input-number"
+    },
+    {
+      "description": "Differential pressure in pascal.",
+      "id": "H1rR0ol9s",
+      "label": "Pa",
+      "position": {
+        "units": "slots",
+        "x": 2,
+        "y": 3
+      },
+      "type": "xod/patch-nodes/output-number"
+    },
+    {
+      "description": "Pulse on read.",
+      "id": "BkHJJneqi",
+      "label": "DONE",
+      "position": {
+        "units": "slots",
+        "x": 3,
+        "y": 3
+      },
+      "type": "xod/patch-nodes/output-pulse"
+    },
+    {
+      "description": "I²C bus",
+      "id": "B1Er12e9i",
+      "label": "I2C",
+      "position": {
+        "units": "slots",
+        "x": 2,
+        "y": 0
+      },
+      "type": "xod/i2c/input-i2c"
+    },
+    {
+      "description": "Update.",
+      "id": "BJQNgAe9i",
+      "label": "UPD",
+      "position": {
+        "units": "slots",
+        "x": 5,
+        "y": 0
+      },
+      "type": "xod/patch-nodes/input-pulse"
+    }
+  ]
+}
